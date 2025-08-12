@@ -21,6 +21,9 @@ captures/
 # Android Studio Navigation editor temp files
 .navigation/
 
+# AndroidIDE
+.androidide/
+
 # External native build folder generated in Android Studio 2.2 and later
 .externalNativeBuild
 

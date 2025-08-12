@@ -48,7 +48,7 @@ namespace homura {
 
 constexpr android_LogPriority PVZ_LOG_LEVEL = ANDROID_LOG_DEBUG;
 
-constexpr const char *PVZ_LOG_TAG = "pvztv";
+constexpr const char *PVZ_LOG_TAG = "pvzExpand";
 
 template <android_LogPriority LEVEL, typename... Args>
 void Log(std::source_location location, std::format_string<Args...> format, Args &&...args) {
