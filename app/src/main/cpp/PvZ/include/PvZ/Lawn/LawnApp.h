@@ -21,6 +21,7 @@
 #define PVZ_LAWN_LAWN_APP_H
 
 #include "PvZ/Lawn/Common/ConstEnums.h"
+#include "PvZ/Lawn/Widget/SeedChooserScreen.h"
 #include "PvZ/Lawn/Widget/AchievementsWidget.h"
 #include "PvZ/SexyAppFramework/Misc/ProfileMgr.h"
 #include "PvZ/SexyAppFramework/SexyAppBase.h"
@@ -34,7 +35,6 @@ class ZenGarden;
 class Board;
 class TitleScreen;
 class MainMenu;
-class SeedChooserScreen;
 class CreditScreen;
 class ChallengeScreen;
 class PoolEffect;
@@ -279,6 +279,7 @@ public:
     void UpdateApp();
     void ShowAwardScreen(AwardType theAwardType);
     void KillAwardScreen();
+    void ShowSeedChooserScreen();
     void LoadLevelConfiguration(int a2, int a3);
     void LoadingThreadProc();
     bool IsChallengeWithoutSeedBank();

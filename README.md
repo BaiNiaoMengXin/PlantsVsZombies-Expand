@@ -7,9 +7,6 @@
 
 ## 构建
 
-> [!NOTE]
-> 需要资源文件请联系仓库作者
-
 使用 Android Studio 或其他支持 gradle 的 IDE, 要求已安装:
 
 - Android SDK Platform 34
@@ -37,8 +34,6 @@ storeFile=myStoreFileLocation
 ### 其他
 
 见项目根目录下的 `.clang-format` 文件.
-
-> 建议在每次提交更改前先用 IDE 对代码进行格式化.
 
 ## 许可协议
 

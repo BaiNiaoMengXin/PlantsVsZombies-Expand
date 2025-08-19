@@ -211,6 +211,20 @@ void LawnApp::KillAwardScreen() {
     return old_LawnApp_KillAwardScreen(this);
 }
 
+void LawnApp::ShowSeedChooserScreen()
+{
+    if (mBoard == NULL || mBoard == nullptr || mBoard == 0 || !mBoard)
+    {
+        return; //很诡异，不知道为什么在加载界面点击的时候会调用这个函数，但mBoard是空的，会崩溃，但是原版的函数就不会崩溃
+    }
+	mSeedChooserScreen = new SeedChooserScreen(false);
+	mSeedChooserScreen->Resize(0, 0, 800, 600);
+	(*(void (**)(int *, SeedChooserScreen *))(*(uint32_t *)mWidgetManager + 24))(mWidgetManager, mSeedChooserScreen);
+	(*(void (**)(int *, SeedChooserScreen *))(*(uint32_t *)mWidgetManager + 60))(mWidgetManager, mSeedChooserScreen);
+	// mWidgetManager->AddWidget(mSeedChooserScreen);
+	// mWidgetManager->BringToBack(mSeedChooserScreen);
+}
+
 bool LawnApp::CanShopLevel() {
     // 决定是否在当前关卡显示道具栏
     if (disableShop)
